@@ -4,5 +4,5 @@ import pycaret
 
 dfa=pd.read_csv("戦力外.csv")
 
-reg=setup(gpa,target="GPA")
+reg=setup(dfa,target="DFA")
 st.write(reg)
