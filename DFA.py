@@ -1,8 +1,10 @@
 import streamlit as st
 import pandas as pd
+import numpy as np
+import plotly.express as px
 
-!pip install pycaret
+
 dfa=pd.read_csv("戦力外.csv")
-import pycaret
+
 reg=setup(gpa,target="GPA")
 st.write(reg)
