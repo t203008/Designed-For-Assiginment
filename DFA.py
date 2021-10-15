@@ -5,4 +5,6 @@ import pycaret
 dfa=pd.read_csv("戦力外.csv")
 from pycaret.regression import *
 reg=setup(dfa,target="DFA")
-st.write(reg)
+best_model = compare_models(fold=5)
+predict_model(best_model)
+plot_model(best_model)
