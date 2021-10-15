@@ -7,4 +7,4 @@ from pycaret.regression import *
 reg=setup(dfa,target="DFA")
 best_model = compare_models(fold=5)
 predict_model(best_model)
-plot_model(best_model)
+st.write(plot_model(best_model))
