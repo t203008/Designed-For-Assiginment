@@ -1,6 +1,5 @@
 import streamlit as st
 import pandas as pd
-pip install yellowbrick
 import yellowbrick
 from warnings import simplefilter
 from sklearn.exceptions import ConvergenceWarning
