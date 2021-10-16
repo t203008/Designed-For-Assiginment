@@ -17,11 +17,13 @@ X=dfa.drop(["DFA","名前"],axis=1)
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3)
 
-from sklearn import tree
-tree_class = tree.DecisionTreeClassifier()
-tree_class.fit(X_train, y_train)
-yhat = tree_class.predict(X_test)
-st.write(metrics.accuracy_score(y_test, yhat))
+from sklearn.linear_model import LogisticRegression
+logreg=LogisticRegression()
+logreg.fit(X_train,y_train)
+y_pred = logreg.predict(X_test)
+
+from sklearn import metrics
+st.write(metrics.accuracy_score(y_test,y_pred))
 
 #dfa=pd.read_csv("戦力外.csv")
 #dfa = pd.get_dummies(dfa, drop_first=True) 
