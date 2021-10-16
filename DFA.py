@@ -17,9 +17,3 @@ X=dfa.drop(["DFA","名前"],axis=1)
 from sklearn.linear_model import LogisticRegression
 logreg =  LogisticRegression()
 logreg.fit(X, y)
-
-from yellowbrick.classifier import ConfusionMatrix
-cm = ConfusionMatrix(logreg, classes=["not spam", "is spam"])
-cm.fit(X, y)
-cm.score(X, y)
-st.write(cm)
