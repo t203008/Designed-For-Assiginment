@@ -12,3 +12,6 @@ y=dfa["DFA"]
 X =dfa.drop("DFA",axis=1)
 
 from sklearn.linear_model import LinearRegression
+reg = LinearRegression()
+reg.fit(X, y)
+yhat = reg.predict(X)
