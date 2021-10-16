@@ -12,5 +12,4 @@ dfa=pd.read_csv("戦力外.csv")
 dfa = pd.get_dummies(dfa, drop_first=True) 
 
 y=dfa["DFA"]
-X =dfa.drop("DFA",axis=1)
-st.write(X)
+X =dfa.drop(["DFA","名前"],axis=1)
