@@ -21,4 +21,4 @@ cm = ConfusionMatrix(logreg, classes=["not dfa", "is dfa"])
 
 cm.fit(X, y)
 cm.score(X, y)
-st.write(cm.show();)
+st.write(cm)
