@@ -11,4 +11,4 @@ dfa=pd.read_csv("戦力外.csv")
 y=dfa["DFA"]
 X =dfa.drop("DFA",axis=1)
 st.write(y)
-st.write(X
+st.write(X)
