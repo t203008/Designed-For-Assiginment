@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
-import yellowbrickfrom warnings import simplefilter
+import yellowbrick
+from warnings import simplefilter
 from sklearn.exceptions import ConvergenceWarning
 simplefilter("ignore", category=ConvergenceWarning)
 simplefilter(action='ignore', category=FutureWarning)
