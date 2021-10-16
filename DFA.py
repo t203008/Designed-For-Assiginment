@@ -15,6 +15,7 @@ dfa=dfa.astype(float)
 y=dfa["DFA"]
 X=dfa.drop(["DFA","名前"],axis=1)
 
+from sklearn.model_selection import train_test_split 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3)
 
 from sklearn.linear_model import LogisticRegression
