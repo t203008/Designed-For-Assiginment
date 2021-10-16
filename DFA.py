@@ -15,14 +15,6 @@ dfa=dfa.astype(float)
 y=dfa["DFA"]
 X=dfa.drop(["DFA","名前"],axis=1)
 
-from sklearn.ensemble import RandomForestRegressor
-rf = RandomForestRegressor()
-rf.fit(X, y)
-
-from sklearn.inspection import permutation_importance
-result = permutation_importance(rf, X, y)
-st.write(result.importances_mean)
-
 from sklearn.model_selection import train_test_split 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3)
 
@@ -41,9 +33,15 @@ dfa=dfa.astype(float)
 y=dfa["DFA"]
 X=dfa.drop(["DFA","名前"],axis=1)
 
+logreg=LogisticRegression()
+logreg.fit(X,y)
+cm = ConfusionMatrix(logreg, classes=["not dfa", "is dfa"])
+cm.fit(X, y)
+cm.score(X, y)
+st.write(cm)
 
-#from sklearn.linear_model import LogisticRegression
-#logreg =  LogisticRegression()
-#logreg.fit(X, y)
+visualizer = ROCAUC(logreg, size=(600,400))
 
-#st.write(dfa)
+visualizer.fit(X, y)
+visualizer.score(X, y)
+st.write(visualizer)
