@@ -37,8 +37,8 @@ from yellowbrick.classifier import ConfusionMatrix
 logreg=LogisticRegression()
 logreg.fit(X,y)
 cm = ConfusionMatrix(logreg, classes=["not dfa", "is dfa"])
-cm.fit(X, y)
-cm.score(X, y)
+cm.fit(X,y)
+cm.score(X,y)
 st.write(cm)
 
 from yellowbrick.classifier import ROCAUC
