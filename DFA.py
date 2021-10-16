@@ -33,12 +33,15 @@ dfa=dfa.astype(float)
 y=dfa["DFA"]
 X=dfa.drop(["DFA","名前"],axis=1)
 
+from yellowbrick.classifier import ConfusionMatrix
 logreg=LogisticRegression()
 logreg.fit(X,y)
 cm = ConfusionMatrix(logreg, classes=["not dfa", "is dfa"])
 cm.fit(X, y)
 cm.score(X, y)
 st.write(cm)
+
+from yellowbrick.classifier import ROCAUC
 
 visualizer = ROCAUC(logreg, size=(600,400))
 
