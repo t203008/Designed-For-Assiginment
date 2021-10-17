@@ -52,39 +52,39 @@ if len(p)==0:
 st.write(p)
 
 pf=pf.split()
-pf=[float(n) for n in pf]
 if len(pf)==0:
   pf=[0,0,0,0,0,0]
+pf=[float(n) for n in pf]
   
 cf=cf.split()
-cf=[float(n) for n in cf]
 if len(cf)==0:
   cf=[0,0,0,0,0,0]
-
+cf=[float(n) for n in cf]
+  
 fbf=fbf.split()
-fbf=[float(n) for n in fbf]
 if len(fbf)==0:
   fbf=[0,0,0,0,0,0]
+fbf=[float(n) for n in fbf]
   
 sbf=sbf.split()
-sbf=[float(n) for n in sbf]
 if len(sbf)==0:
   sbf=[0,0,0,0,0,0]
+sbf=[float(n) for n in sbf]
 
 tbf=tbf.split()
-tbf=[float(n) for n in tbf]
 if len(tbf)==0:
   tbf=[0,0,0,0,0,0]
+tbf=[float(n) for n in tbf]
 
 ssf=ssf.split()
-ssf=[float(n) for n in ssf]
 if len(ssf)==0:
   ssf=[0,0,0,0,0,0]
+ssf=[float(n) for n in ssf]
 
 off=off.split()
-off=[float(n) for n in off]
 if len(off)==0:
   off=[0,0,0,0,0,0]
+off=[float(n) for n in off]
 
 fielding=[]
 i=0
