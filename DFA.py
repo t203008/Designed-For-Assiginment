@@ -90,5 +90,5 @@ fielding=[]
 i=0
 while i<=len(off):
   fielding.append(pf[i]+cf[i]+fbf[i]+sbf[i]+tbf[i]+ssf[i]+off[i])
-  i+=1
+  i=i+1
 st.write(fielding)
