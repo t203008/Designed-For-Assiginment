@@ -6,17 +6,19 @@ from warnings import simplefilter
 from sklearn.exceptions import ConvergenceWarning
 simplefilter("ignore", category=ConvergenceWarning)
 simplefilter(action='ignore', category=FutureWarning)
+
 st.title("戦力外予想")
 train=int(st.sidebar.number_input('訓練データ量[%]',0,100,30))
 
 dfa=pd.read_csv("戦力外.csv")
-dfa = pd.get_dummies(dfa.drop(["名前"],axis=1), drop_first=True) 
+st.write(dfa)
+dfa=dfa.drop(["名前"],axis=1)
+dfa = pd.get_dummies(dfa, drop_first=True) 
 dfa=dfa.fillna(0)
 dfa=dfa.astype(float)
 
 y=dfa["DFA"]
 X=dfa.drop("DFA",axis=1)
-st.write(X)
 
 from sklearn.model_selection import train_test_split 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=train/100)
