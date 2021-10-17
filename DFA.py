@@ -52,38 +52,40 @@ st.write(p)
 pf=pf.split()
 pf=[float(n) for n in pf]
 if len(pf)==0:
-  pf=[0,0,0,0,0]
+  pf=[0,0,0,0,0,0]
   
 cf=cf.split()
 cf=[float(n) for n in cf]
 if len(cf)==0:
-  cf=[0,0,0,0,0]
+  cf=[0,0,0,0,0,0]
 
 fbf=fbf.split()
 fbf=[float(n) for n in fbf]
 if len(fbf)==0:
-  fbf=[0,0,0,0,0]
+  fbf=[0,0,0,0,0,0]
   
 sbf=sbf.split()
 sbf=[float(n) for n in sbf]
 if len(sbf)==0:
-  sbf=[0,0,0,0,0]
+  sbf=[0,0,0,0,0,0]
 
 tbf=tbf.split()
 tbf=[float(n) for n in tbf]
 if len(tbf)==0:
-  tbf=[0,0,0,0,0]
+  tbf=[0,0,0,0,0,0]
 
 ssf=ssf.split()
 ssf=[float(n) for n in ssf]
 if len(ssf)==0:
-  ssf=[0,0,0,0,0]
+  ssf=[0,0,0,0,0,0]
 
 off=off.split()
 off=[float(n) for n in off]
 if len(off)==0:
-  off=[0,0,0,0,0]
+  off=[0,0,0,0,0,0]
 
-fielding=[pf[0]+cf[0]+fbf[0]+sbf[0]+tbf[0]+ssf[0]+off[0],pf[1]+cf[1]+fbf[1]+sbf[1]+tbf[1]+ssf[1]+off[1]]
+fielding=[]
+for n in 6:
+  fielding+=pf[n]+cf[n]+fbf[n]+sbf[n]+tbf[n]+ssf[n]+off[n]
 
 st.write(fielding)
