@@ -70,6 +70,8 @@ if len(fbf)==0:
 else:
   fbf.append(0)
 fbf=[float(n) for n in fbf]
+
+st.write(fbf)
   
 sbf=sbf.split()
 sbf.append(0)
