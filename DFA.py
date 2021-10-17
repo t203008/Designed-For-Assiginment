@@ -12,8 +12,8 @@ train=int(st.sidebar.number_input('訓練データ量[%]',0,100,30))
 
 dfa=pd.read_csv("戦力外.csv")
 dfa=dfa.drop(["名前"],axis=1)
-st.write(dfa)
 dfa = pd.get_dummies(dfa, drop_first=True) 
+st.write(dfa)
 dfa=dfa.fillna(0)
 dfa=dfa.astype(float)
 
