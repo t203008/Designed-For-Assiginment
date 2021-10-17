@@ -23,7 +23,7 @@ logreg.fit(X,y)
 cm = ConfusionMatrix(logreg, classes=["not dfa", "is dfa"])
 cm.fit(X,y)
 cm.score(X,y)
-st.write(cm.show)
+st.write(cm.show())
 
 from yellowbrick.classifier import ROCAUC
 
@@ -31,7 +31,7 @@ visualizer = ROCAUC(logreg, size=(600,400))
 
 visualizer.fit(X, y)
 visualizer.score(X, y)
-st.write(visualizer.show)
+st.write(visualizer.show())
 
 
 from sklearn.model_selection import train_test_split 
