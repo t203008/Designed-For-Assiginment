@@ -41,3 +41,7 @@ off=st.sidebar.text_input("外野での守備データ(NPBのデータの試合�
 b=batter.split()
 b=[float(n) for n in b]
 st.write(b)
+
+p=pitcher.aplit()
+p=[float(n) for n in p]
+st.write(p)
