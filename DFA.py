@@ -12,13 +12,13 @@ train=int(st.sidebar.number_input('訓練データ量[%]',0,100,30))
 
 dfa=pd.read_csv("戦力外.csv")
 dfa=dfa.drop(columns=dfa.columns[[0,67]],axis=1)
-st.write(dfa)
 dfa = pd.get_dummies(dfa, drop_first=True) 
 dfa=dfa.fillna(0)
 dfa=dfa.astype(float)
 
 y=dfa["DFA"]
 X=dfa.drop("DFA",axis=1)
+st.write(X)
 
 from sklearn.model_selection import train_test_split 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=train/100)
