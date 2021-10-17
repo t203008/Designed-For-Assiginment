@@ -49,7 +49,7 @@ p=pitcher.split()
 p=[float(n) for n in p]
 if len(p)==0:
   for i in p:
-    p.append(0)
+    p.append(int(0))
 st.write(p)
 
 pf=pf.split()
