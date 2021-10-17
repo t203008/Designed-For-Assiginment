@@ -11,7 +11,7 @@ st.title("戦力外予想")
 train=int(st.sidebar.number_input('訓練データ量[%]',0,100,30))
 
 dfa=pd.read_csv("戦力外.csv")
-dfa=dfa.drop(index=dfa.index[[0,66]],axis=1)
+dfa=dfa.drop(index=dfa.index[[0,66]],axis=0)
 st.write(dfa)
 dfa = pd.get_dummies(dfa, drop_first=True) 
 dfa=dfa.fillna(0)
