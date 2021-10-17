@@ -9,6 +9,7 @@ simplefilter(action='ignore', category=FutureWarning)
 st.title("戦力外予想")
 
 train=int(st.sidebar.number_input('訓練データ量[%]',0,100,30))
+batter=st.sidebar.text_input("打撃データ",)
 
 dfa=pd.read_csv("戦力外.csv")
 dfa = pd.get_dummies(dfa, drop_first=True) 
