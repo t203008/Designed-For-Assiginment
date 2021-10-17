@@ -45,3 +45,22 @@ st.write(b)
 p=pitcher.split()
 p=[float(n) for n in p]
 st.write(p)
+
+pf=pf.split()
+pf=[float(n) for n in pf]
+cf=cf.split()
+cf=[float(n) for n in cf]
+fbf=fbf.split()
+fbf=[float(n) for n in fbf]
+sbf=sbf.split()
+sbf=[float(n) for n in sbf]
+tbf=tbf.split()
+tbf=[float(n) for n in tbf]
+ssf=ssf.split()
+ssf=[float(n) for n in ssf]
+off=off.split()
+off=[float(n) for n in off]
+
+fielding=[pf[0]+cf[0]+fbf[0]+sbf[0]+tbf[0]+ssf[0]+off[0],pf[1]+cf[1]+fbf[1]+sbf[1]+tbf[1]+ssf[1]+off[1]]
+
+st.write(fielding)
