@@ -8,7 +8,7 @@ simplefilter("ignore", category=ConvergenceWarning)
 simplefilter(action='ignore', category=FutureWarning)
 st.title("戦力外予想")
 
-train=int(st.sidebar.number_input('訓練データ量',0,1,0))
+train=int(st.sidebar.number_input('訓練データ量[%]',0,100,30))
 
 dfa=pd.read_csv("戦力外.csv")
 dfa = pd.get_dummies(dfa, drop_first=True) 
@@ -19,7 +19,7 @@ y=dfa["DFA"]
 X=dfa.drop("DFA",axis=1)
 
 from sklearn.model_selection import train_test_split 
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=train)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=train/100)
 
 logreg=LogisticRegression()
 logreg.fit(X_train,y_train)
