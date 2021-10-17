@@ -103,7 +103,7 @@ else:
   off.append(0)
 off=[float(n) for n in off]
 
-a=[pf[0]+cf[0]+fbf[0]+sbf[0]+tbf[0]+ssf[0]+off[0],pf[1]+cf[1]+fbf[1]+sbf[1]+tbf[1]+ssf[1]+off[1],pf[2]+cf[2]]
+a=[pf[0]+cf[0]+fbf[0]+sbf[0]+tbf[0]+ssf[0]+off[0],pf[1]+cf[1]+fbf[1]+sbf[1]+tbf[1]+ssf[1]+off[1],pf[2]+cf[2]+fbf[2]]
 st.write(a)
 fielding=[pf[0]+cf[0]+fbf[0]+sbf[0]+tbf[0]+ssf[0]+off[0],pf[1]+cf[1]+fbf[1]+sbf[1]+tbf[1]+ssf[1]+off[1],pf[2]+cf[2]+fbf[2]+sbf[2]+tbf[2]+ssf[2]+off[2],pf[3]+cf[3]+fbf[3]+sbf[3]+tbf[3]+ssf[3]+off[3],pf[4]+cf[4]+fbf[4]+sbf[4]+tbf[4]+ssf[4]+off[4],pf[5]+cf[5]+fbf[5]+sbf[5]+tbf[5]+ssf[5]+off[5]]
 st.write(fielding)
