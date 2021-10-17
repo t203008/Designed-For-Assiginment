@@ -52,9 +52,10 @@ if len(p)==0:
 st.write(p)
 
 pf=pf.split()
-pf.append(0)
 if len(pf)==0:
   pf=[0,0,0,0,0,0]
+else:
+  pf.append(0)
 pf=[float(n) for n in pf]
 st.write(pf)
   
