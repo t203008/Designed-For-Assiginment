@@ -48,6 +48,10 @@ st.write(p)
 
 pf=pf.split()
 pf=[float(n) for n in pf]
+if len(pf)==0:
+  pf=[0,0,0,0,0]
+st.write(pf)
+
 cf=cf.split()
 cf=[float(n) for n in cf]
 fbf=fbf.split()
@@ -61,6 +65,6 @@ ssf=[float(n) for n in ssf]
 off=off.split()
 off=[float(n) for n in off]
 
-fielding=[pf[0]+cf[0]+fbf[0]+sbf[0]+tbf[0]+ssf[0]+off[0],pf[1]+cf[1]+fbf[1]+sbf[1]+tbf[1]+ssf[1]+off[1]]
+#fielding=[pf[0]+cf[0]+fbf[0]+sbf[0]+tbf[0]+ssf[0]+off[0],pf[1]+cf[1]+fbf[1]+sbf[1]+tbf[1]+ssf[1]+off[1]]
 
-st.write(fielding)
+#st.write(fielding)
