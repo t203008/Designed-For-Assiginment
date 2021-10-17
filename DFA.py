@@ -13,7 +13,7 @@ dfa=dfa.fillna(0)
 dfa=dfa.astype(float)
 
 y=dfa["DFA"]
-X=dfa.drop(["DFA","名前"],axis=1)
+X=dfa.drop("DFA",axis=1)
 
 from sklearn.linear_model import LogisticRegression
 from yellowbrick.classifier import ConfusionMatrix
