@@ -6,6 +6,9 @@ from warnings import simplefilter
 from sklearn.exceptions import ConvergenceWarning
 simplefilter("ignore", category=ConvergenceWarning)
 simplefilter(action='ignore', category=FutureWarning)
+st.title("戦力外予想")
+
+train=int(st.sidebar.number_input('訓練データ量',0,1,0))
 
 dfa=pd.read_csv("戦力外.csv")
 dfa = pd.get_dummies(dfa, drop_first=True) 
@@ -15,27 +18,8 @@ dfa=dfa.astype(float)
 y=dfa["DFA"]
 X=dfa.drop("DFA",axis=1)
 
-from sklearn.linear_model import LogisticRegression
-from yellowbrick.classifier import ConfusionMatrix
-
-logreg=LogisticRegression()
-logreg.fit(X,y)
-cm = ConfusionMatrix(logreg, classes=["not dfa", "is dfa"])
-cm.fit(X,y)
-cm.score(X,y)
-st.write(cm.show())
-
-from yellowbrick.classifier import ROCAUC
-
-visualizer = ROCAUC(logreg, size=(600,400))
-
-visualizer.fit(X, y)
-visualizer.score(X, y)
-st.write(visualizer.show())
-
-
 from sklearn.model_selection import train_test_split 
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=train)
 
 logreg=LogisticRegression()
 logreg.fit(X_train,y_train)
