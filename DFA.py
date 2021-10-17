@@ -87,7 +87,7 @@ if len(off)==0:
   off=[0,0,0,0,0,0]
 
 fielding=[]
-for n in off:
+for n in pf:
   fielding.append(pf[n]+cf[n]+fbf[n]+sbf[n]+tbf[n]+ssf[n]+off[n])
 
 st.write(fielding)
