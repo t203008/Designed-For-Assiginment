@@ -56,6 +56,7 @@ pf.append(0)
 if len(pf)==0:
   pf=[0,0,0,0,0,0]
 pf=[float(n) for n in pf]
+st.write(pf)
   
 cf=cf.split()
 if len(cf)==0:
