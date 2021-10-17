@@ -42,6 +42,6 @@ b=batter.split()
 b=[float(n) for n in b]
 st.write(b)
 
-p=pitcher.aplit()
+p=pitcher.split()
 p=[float(n) for n in p]
 st.write(p)
