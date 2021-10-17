@@ -52,6 +52,7 @@ if len(p)==0:
 st.write(p)
 
 pf=pf.split()
+pf.append(0)
 if len(pf)==0:
   pf=[0,0,0,0,0,0]
 pf=[float(n) for n in pf]
@@ -62,26 +63,31 @@ if len(cf)==0:
 cf=[float(n) for n in cf]
   
 fbf=fbf.split()
+fbf.append(0)
 if len(fbf)==0:
   fbf=[0,0,0,0,0,0]
 fbf=[float(n) for n in fbf]
   
 sbf=sbf.split()
+sbf.append(0)
 if len(sbf)==0:
   sbf=[0,0,0,0,0,0]
 sbf=[float(n) for n in sbf]
 
 tbf=tbf.split()
+tbf.append(0)
 if len(tbf)==0:
   tbf=[0,0,0,0,0,0]
 tbf=[float(n) for n in tbf]
 
 ssf=ssf.split()
+ssf.append(0)
 if len(ssf)==0:
   ssf=[0,0,0,0,0,0]
 ssf=[float(n) for n in ssf]
 
 off=off.split()
+off.append(0)
 if len(off)==0:
   off=[0,0,0,0,0,0]
 off=[float(n) for n in off]
