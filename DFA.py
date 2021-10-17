@@ -7,6 +7,7 @@ from sklearn.exceptions import ConvergenceWarning
 simplefilter("ignore", category=ConvergenceWarning)
 simplefilter(action='ignore', category=FutureWarning)
 st.title("戦力外予想")
+train=int(st.sidebar.number_input('訓練データ量[%]',0,100,30))
 
 dfa=pd.read_csv("戦力外.csv")
 dfa = pd.get_dummies(dfa, drop_first=True) 
@@ -27,8 +28,6 @@ y_pred = logreg.predict(X_test)
 from sklearn import metrics
 st.write(metrics.accuracy_score(y_test,y_pred))
 
-
-train=int(st.sidebar.number_input('訓練データ量[%]',0,100,30))
 batter=st.sidebar.text_input("打撃データ(NPBのデータの試合から出塁率までをコピペ)",)
 pitcher=st.sidebar.text_input("投手データ(NPBのデータの登板から防御率をコピペ)",)
 pf=st.sidebar.text_input("投手での守備データ(NPBのデータの試合から併殺までをコピペ)",)
