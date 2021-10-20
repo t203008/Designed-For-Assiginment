@@ -8,6 +8,9 @@ simplefilter("ignore", category=ConvergenceWarning)
 simplefilter(action='ignore', category=FutureWarning)
 
 st.title("戦力外予想")
+st.subtitle("下にNPBの二軍成績を貼り付けてください")
+st.subtitle("横に選手の詳細を記入してください")
+
 train=int(st.sidebar.number_input('訓練データ量[%]',0,100,30))
 
 dfa=pd.read_csv("戦力外.csv")
@@ -31,16 +34,16 @@ y_pred = logreg.predict(X_test)
 from sklearn import metrics
 st.write(metrics.accuracy_score(y_test,y_pred))
 
-#player=st.sidebar.text_input()
+player=st.sidebar.title("選手データ")
 batter=st.text_input("打撃データ(NPBのデータの試合から出塁率までをコピペ)",)
-pitcher=st.sidebar.text_input("投手データ(NPBのデータの登板から防御率をコピペ)",)
-pf=st.sidebar.text_input("投手での守備データ(NPBのデータの試合から併殺までをコピペ)",)
-cf=st.sidebar.text_input("捕手での守備データ(NPBのデータの試合から捕逸までをコピペ)",)
-fbf=st.sidebar.text_input("一塁手での守備データ(NPBのデータの試合から併殺までをコピペ)",)
-sbf=st.sidebar.text_input("二塁手での守備データ(NPBのデータの試合から併殺までをコピペ)",)
-tbf=st.sidebar.text_input("三塁手での守備データ(NPBのデータの試合から併殺までをコピペ)",)
-ssf=st.sidebar.text_input("遊撃手での守備データ(NPBのデータの試合から併殺までをコピペ)",)
-off=st.sidebar.text_input("外野での守備データ(NPBのデータの試合から併殺までをコピペ)",)
+pitcher=st.text_input("投手データ(NPBのデータの登板から防御率をコピペ)",)
+pf=st.text_input("投手での守備データ(NPBのデータの試合から併殺までをコピペ)",)
+cf=st.text_input("捕手での守備データ(NPBのデータの試合から捕逸までをコピペ)",)
+fbf=st.text_input("一塁手での守備データ(NPBのデータの試合から併殺までをコピペ)",)
+sbf=st.text_input("二塁手での守備データ(NPBのデータの試合から併殺までをコピペ)",)
+tbf=st.text_input("三塁手での守備データ(NPBのデータの試合から併殺までをコピペ)",)
+ssf=st.text_input("遊撃手での守備データ(NPBのデータの試合から併殺までをコピペ)",)
+off=st.text_input("外野での守備データ(NPBのデータの試合から併殺までをコピペ)",)
 
 b=batter.split()
 b=[float(n) for n in b]
