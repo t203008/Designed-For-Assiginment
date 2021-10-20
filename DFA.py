@@ -31,7 +31,8 @@ y_pred = logreg.predict(X_test)
 from sklearn import metrics
 st.write(metrics.accuracy_score(y_test,y_pred))
 
-batter=st.sidebar.text_input("打撃データ(NPBのデータの試合から出塁率までをコピペ)",)
+#player=st.sidebar.text_input()
+batter=st.text_input("打撃データ(NPBのデータの試合から出塁率までをコピペ)",)
 pitcher=st.sidebar.text_input("投手データ(NPBのデータの登板から防御率をコピペ)",)
 pf=st.sidebar.text_input("投手での守備データ(NPBのデータの試合から併殺までをコピペ)",)
 cf=st.sidebar.text_input("捕手での守備データ(NPBのデータの試合から捕逸までをコピペ)",)
@@ -106,3 +107,5 @@ fielding=[pf[0]+cf[0]+fbf[0]+sbf[0]+tbf[0]+ssf[0]+off[0],
           pf[5]+cf[5]+fbf[5]+sbf[5]+tbf[5]+ssf[5]+off[5],
           pf[0],cf[0],fbf[0],sbf[0],tbf[0],ssf[0],off[0]]
 st.write(fielding)
+
+
