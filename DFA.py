@@ -8,8 +8,8 @@ simplefilter("ignore", category=ConvergenceWarning)
 simplefilter(action='ignore', category=FutureWarning)
 
 st.title("戦力外予想")
-st.header("下にNPBの二軍成績を貼り付けてください")
-st.header("横に選手の詳細を記入してください")
+st.subheader("下にNPBの二軍成績を貼り付けてください")
+st.subheader("横に選手の詳細を記入してください")
 
 train=int(st.sidebar.number_input('訓練データ量[%]',0,100,30))
 
